@@ -1,0 +1,77 @@
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.logo {
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    max-width: 400px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #c0c0c0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.contacto p {
+    margin: 0;
+
+}
+
+.contacto h2 {
+    font-size: 1.5rem;
+}
+
+.contacto p {
+    margin: 0;
+}
+
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.iconos i {
+    margin: 0 10px;
+}
+.boton-moderno {
+    background-color: #c0392b;
+    color: #fff; 
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+  
+    /* Agregar transición para efectos suaves */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .boton-moderno:hover {
+    background-color: #e74c3c; /* Cambiar el color de fondo al pasar por encima */
+  }
