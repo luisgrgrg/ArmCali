@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import List from './List';
-import './ListItem.css';
+import '../components/ListItem.css';
 import Swal from 'sweetalert2';
 
 
@@ -16,13 +16,13 @@ const Ranking = () => {
 
     const mostrarMensaje = () => {
         Swal.fire({
-          title: 'En Desarrollo',
-          text: 'Esta característica aún está en desarrollo.',
-          icon: 'info',
-          confirmButtonText: '¡Entendido!',
+            title: 'En Desarrollo',
+            text: 'Esta característica aún está en desarrollo.',
+            icon: 'info',
+            confirmButtonText: '¡Entendido!',
         });
-      }; 
-      const data = [
+    };
+    const data = [
         { name: 'Jorge Parra', points: 22 },
         { name: 'Johan Cañas', points: 21 },
         { name: 'José Alejandro Ramos', points: 18 },
@@ -43,41 +43,58 @@ const Ranking = () => {
         { name: 'Larry', points: 5 },
         { name: 'Sneyder', points: 4 },
         { name: 'Luis Gabriel', points: 3 },
-      ];
+    ];
+    const navigate = useNavigate();
+
 
     return (
-        <div className="contenedor">
-            <div className="contenido">
-                <h1 className="titulo">Lista de Nuestras Bestias 🐻</h1>
+        <div>
+            <div className="top-bar">
+                <h1 className="logo">Armwrestling Cali</h1>
+                <nav className="nav-bar">
+                    <button onClick={() => navigate('/')}>Inicio</button>
+                    <button onClick={() => navigate('/ranking')}>Ranking</button>
+                </nav>
             </div>
-            <br />
-            <div>
-                <List data={data} />
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div className="contenedor">
+
+                <div className="contenido">
+                    <h1 className="titulo">Lista de Nuestras Bestias 🐻</h1>
+                </div>
+                <br />
+                <div>
+                    <List data={data} />
+                </div>
+                <br />
+
+                <button className="boton-moderno" name='ranking' onClick={mostrarMensaje}>
+                    🤜 ¡ENFRENTAMIENTOS! 🤛
+                </button>
+                <br />
+
+                <footer className="footer">
+                    <div className="contacto">
+                        <h2 style={{ color: 'gray' }}>Contactanos</h2>
+                        <span style={{ fontWeight: 'bold', color: 'gray' }}>
+                            Teléfono : <span style={{ fontWeight: 'normal', color: 'white' }}>+57 3162921181 - +57 31117495150  </span>
+                        </span>
+                        <br />
+                        <span style={{ fontWeight: 'bold', color: 'gray' }}>
+                            Dirección: <span style={{ fontWeight: 'normal', color: 'white' }}>Cra. 80, Cali, Parque del Ingenio - Cali, Valle del Cauca </span>
+                        </span>
+                    </div>
+                    <div className="iconos">
+                        <i className="fa fa-phone" aria-hidden="true"></i>
+                        <i className="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                </footer>
+
             </div>
-            <br />
-
-            <button className="boton-moderno" name='ranking'  onClick={mostrarMensaje}>
-            🤜 ¡ENFRENTAMIENTOS! 🤛
-            </button>
-            <br />
-
-            <footer className="footer">
-                <div className="contacto">
-                    <h2 style={{ color: 'gray' }}>Contactanos</h2>
-                    <span style={{ fontWeight: 'bold', color: 'gray' }}>
-                        Teléfono : <span style={{ fontWeight: 'normal', color: 'white' }}>+57 3162921181 - +57 31117495150  </span>
-                    </span>
-                    <br />
-                    <span style={{ fontWeight: 'bold', color: 'gray' }}>
-                        Dirección: <span style={{ fontWeight: 'normal', color: 'white' }}>Cra. 80, Cali, Parque del Ingenio - Cali, Valle del Cauca </span>
-                    </span>
-                </div>
-                <div className="iconos">
-                    <i className="fa fa-phone" aria-hidden="true"></i>
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                </div>
-            </footer>
-
         </div>
 
     );

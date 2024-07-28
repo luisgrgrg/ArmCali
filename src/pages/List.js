@@ -1,5 +1,6 @@
 import React from 'react';
-import ListItem from './ListItem';
+import '../components/ListItem.css';
+import ListItem from '../components/ListItem';
 
 const List = ({ data }) => {
     // Organiza la lista por puntos en orden descendente

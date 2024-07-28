@@ -1,0 +1,26 @@
+.slider {
+    position: relative;
+    padding-top: 30px;
+    width: 100vw; /* Ocupar toda el ancho de la ventana */
+    height: 100vh; /* Ocupar toda la altura de la ventana */
+    overflow: hidden;
+    margin: 0; /* Eliminar márgenes para que ocupe toda la pantalla */
+}
+
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+}
