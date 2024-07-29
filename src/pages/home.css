@@ -10,9 +10,12 @@
 
 .logo {
     width: 250px;
-    margin-bottom: 20px;
+    padding-right: 800px;
+}
+.img-icon {
+    width: 55px;
+    padding-left: 50px;
     border-radius: 50%;
-    overflow: hidden;
 }
 
 .titulo {

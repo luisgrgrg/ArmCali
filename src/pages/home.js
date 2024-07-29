@@ -13,6 +13,7 @@ const App = () => {
     return (
         <div>
             <div className="top-bar">
+            <img className='img-icon' src='./images/arm-icon.png'/>
                 <h1 className="logo">Armwrestling Cali</h1>
                 <nav className="nav-bar">
                     <button onClick={() => navigate('/')}>Inicio</button>

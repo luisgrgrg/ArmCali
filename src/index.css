@@ -13,29 +13,27 @@ code {
 }
 .top-bar {
   display: flex;
-  overflow: hidden;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: white;
   box-sizing: border-box;
-  padding: 8px 15px;
-  position: fixed;
+ position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
 }
 
 .top-bar .logo {
-  font-size: 19px;
-  line-height: 2.5; 
-  padding-left: 10px;
+  font-size: 20px;
+  padding-left: 22px;
 }
 
 .top-bar .nav-bar {
-  padding-right: 50px;
-  display: block;
-  gap: 15px;
+  display: flex;
+  gap: 20px;
+  padding-right: 30px;
+
 }
 
 .top-bar .nav-bar button {
@@ -44,8 +42,12 @@ code {
   color: white;
   font-size: 16px;
   cursor: pointer;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s; /* Agrega transiciones para los botones */
 }
 
 .top-bar .nav-bar button:hover {
-  text-decoration: underline;
+  text-decoration: wavy;
+  color: #f0f0f0;
+  background-color: #444; /* Cambia el color de fondo al pasar el cursor */
+  transform: scale(1.08); /* Aplica un pequeño zoom al acercarse */
 }
